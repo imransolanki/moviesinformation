@@ -1,0 +1,136 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navigation_bar_background_color"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" >
+
+        <ImageView
+            android:id="@+id/rlMovieImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/empty_string" >
+        </ImageView>
+
+        <!-- Title -->
+
+        <com.themoviedb.presentation.util.FontTextView
+            android:id="@+id/tv_movie_title"
+            style="@style/text_open_sans_extra_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlMovieImage"
+            android:layout_marginRight="25dp"
+            android:singleLine="false"
+            android:text="On, the Charts: Usher&apos;s View From the Top"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <!-- Rating -->
+
+        <RatingBar
+            android:id="@+id/movie_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_movie_title"
+            android:elevation="2dp"
+            android:isIndicator="true"
+            android:max="5" />
+
+        <!-- Home Page Link -->
+
+        <com.themoviedb.presentation.util.FontTextView
+            android:id="@+id/tv_movie_home_page"
+            style="@style/text_open_sans_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/movie_rating"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textSize="12sp" />
+
+        <!-- Separator -->
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_movie_home_page"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white" />
+
+        <!-- Movie Details -->
+
+        <com.themoviedb.presentation.util.FontTextView
+            android:id="@+id/tv_movie_overview"
+            style="@style/text_open_sans_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/separator"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:singleLine="false"
+            android:text="@string/dummy_movie_overview"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <!-- Copyright Logos -->
+
+        <com.themoviedb.presentation.util.FontTextView
+            android:id="@+id/tv_copyright_symbol"
+            style="@style/text_font_awesome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_movie_overview"
+            android:layout_marginTop="15dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/fontawesome_copyright"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <!-- Adult Logo -->
+
+        <com.themoviedb.presentation.util.FontTextView
+            android:id="@+id/tv_adult_symbol"
+            style="@style/text_font_awesome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_movie_overview"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/tv_copyright_symbol"
+            android:layout_toRightOf="@id/tv_copyright_symbol"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/fontawesome_adult"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <!-- Production Companies -->
+
+        <com.themoviedb.presentation.util.FontTextView
+            android:id="@+id/tv_movie_production_companies"
+            style="@style/text_open_sans_italic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_copyright_symbol"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="20th Century Fox,Fox 2000 Pictures,Regency Enterprises"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</ScrollView>

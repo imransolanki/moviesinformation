@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.themoviedb"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
+
+    <!-- Internet permission to hit web-servers -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.themoviedb.MovieInformationApp"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.themoviedb.presentation.ScrMain"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <!-- Points to searchable activity -->
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="true" />
+
+            <!-- Points to searchable meta data -->
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
+        <provider
+            android:name="com.themoviedb.provider.MovieInformationProvider"
+            android:authorities="com.themoviedb.MovieInformationProvider"
+            android:exported="false" />
+    </application>
+
+</manifest>

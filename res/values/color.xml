@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="gray">#e8e8e8</color>
+    <color name="navigation_bar_background_color">#1F5E89</color>
+    <color name="dark_gray">#bfbfbf</color>
+    <color name="blue">#1F5E89</color>
+    <color name="main_screen_background">#1F5E89</color>
+    <color name="action_bar_hint_color">#F0F0F0</color>
+
+    <!-- Cards for Movies -->
+    <color name="card_background_color">#2A80B9</color>
+
+</resources>
